@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/337d7d2383.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>NovaLite Test Task</title>
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__top-box container">
+        <div class="navbar__top-box__logo-box">
+          <div style="display: flex; align-items: center">
+            <i
+              class="fa-solid fa-bars navbar__top-box__logo-box__hamburger"
+              id="hamburger"
+            ></i>
+            <img src="./assets/img/LOGO.png" alt="logo" />
+          </div>
+          <div class="navbar__top-box__logo-box__link-box">
+            <a href="#">Products</a><a href="#">Services</a
+            ><a href="#">About us</a><a href="#">Contact</a>
+          </div>
+          <form>
+            <input type="text" placeholder="Search" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="navbar__top-box__icon-box">
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-regular fa-heart"></i>
+          <div class="navbar__top-box__icon-box__cart">
+            <!-- regular cart icon don't work so this one is alternative -->
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>1</span>
+          </div>
+        </div>
+      </div>
+      <div class="navbar__bottom-box container">
+        <a href="#">Products</a><a href="#">Services</a><a href="#">About us</a
+        ><a href="#">Contact</a>
+
+        <form>
+          <input type="text" placeholder="Search" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <!-- END NAVBAR SECTION -->
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <div class="container">
+        <div class="header__navigation">
+          <a href="#">Home</a><i class="fa-solid fa-chevron-right"></i
+          ><a href="#">Products</a><i class="fa-solid fa-chevron-right"></i
+          ><a href="#">Bikes</a>
+        </div>
+        <div class="header__title-box">
+          <h1>Product name lorem ipsum</h1>
+          <span class="header__title-box__icon-box">
+            <i class="fa-solid fa-arrow-right"></i
+            ><i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-regular fa-heart"></i>
+            <!-- regular nodes icon don't work, this one is alternative -->
+            <i class="fa-solid fa-share-nodes"></i>
+          </span>
+        </div>
+        <div class="header__main-box">
+          <div class="header__main-box__image-box">
+            <button type="button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img src="./assets/img/bike.png" alt="bike" />
+            <button type="button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="header__main-box__desc-box">
+            <p class="header__main-box__desc-box__title">
+              In stock <span>- only 2 left</span>
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <form class="header__main-box__desc-box__form">
+              <div class="header__main-box__desc-box__form__opt-box">
+                <label
+                  for="model"
+                  class="header__main-box__desc-box__form__opt-box__opt-label"
+                >
+                  Model
+                  <select id="model" name="model">
+                    <option value="bents - medium">Gents - Medium</option>
+                  </select>
+                </label>
+                <label
+                  for="color"
+                  class="header__main-box__desc-box__form__opt-box__opt-label"
+                >
+                  Color
+                  <select id="color" name="color">
+                    <option value="black">Black</option>
+                  </select>
+                </label>
+              </div>
+              <label
+                for="add"
+                class="header__main-box__desc-box__form__check-label"
+              >
+                <input type="checkbox" name="add" />
+                Add option lorem ipsum
+              </label>
+              <label
+                for="add2"
+                class="header__main-box__desc-box__form__check-label"
+              >
+                <input type="checkbox" name="add2" />
+                Add option autpat velit cano totam rem aperiam
+              </label>
+            </form>
+            <div class="header__main-box__desc-box__button-box">
+              <button type="submit">Add to cart</button>
+              <button type="button" id="contact">Contact us</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__info">
+          <p>Description</p>
+          <p>Specifications</p>
+          <p>Reviews (7)</p>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER SECTION -->
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+      <img
+        class="about__responsive-image"
+        src="./assets/img/bike2.png"
+        alt="bikes"
+      />
+      <div class="container">
+        <div class="about__content">
+          <div class="about__content__desc-box">
+            <h4>Product description</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. <br /><br />
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              unde omnis iste natus error sit voluptatem accusantium doloremque
+              laudantium.
+            </p>
+            <button type="button">More info</button>
+          </div>
+          <img
+            class="about__content__image"
+            src="./assets/img/bike2.png"
+            alt="bikes"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT SECTION -->
+
+    <!-- TABLE SECTION -->
+    <section class="table">
+      <div class="container">
+        <h4>Technical specifications</h4>
+        <table>
+          <tr>
+            <th>Model</th>
+            <th>Frame size</th>
+            <th>Weight</th>
+            <th>Max speed</th>
+            <th>Battery</th>
+            <th>Engine</th>
+          </tr>
+          <tr>
+            <td>Ladies - Small</td>
+            <td>50 cm</td>
+            <td>24 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+          <tr>
+            <td>Ladies - Medium</td>
+            <td>55 cm</td>
+            <td>25 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+          <tr>
+            <td>Ladies - Large</td>
+            <td>60 cm</td>
+            <td>26 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+          <tr>
+            <td>Gents - Small</td>
+            <td>50 cm</td>
+            <td>24 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+          <tr>
+            <td>Gents - Medium</td>
+            <td>55 cm</td>
+            <td>25 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+          <tr>
+            <td>Gents - Large</td>
+            <td>60 cm</td>
+            <td>26 kg</td>
+            <td>45 km/h</td>
+            <td>625 Wh</td>
+            <td>Bosch Performance Line Speed</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- END TABLE SECTION -->
+
+    <!-- POPUP SECTION -->
+    <div class="pop-up" id="popup">
+      <div class="pop-up__content">
+        <div class="pop-up__content__title-box">
+          <h4>Contact us</h4>
+          <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+        <p>We’ll get back to you as soon as possible.</p>
+        <form>
+          <input type="text" placeholder="Your e-mail" />
+          <textarea
+            name="Your message"
+            placeholder="Your message"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </form>
+        <div class="pop-up__content__btn-box">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="Cancel">Send message</button>
+        </div>
+      </div>
+    </div>
+    <!-- END POPUP SECTION -->
+
+    <!-- JS IMPORT -->
+    <script src="./assets/script/index.js"></script>
+  </body>
+</html>

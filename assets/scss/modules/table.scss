@@ -1,0 +1,62 @@
+.table {
+  padding: 40px 0px 80px;
+  background-color: $grey;
+
+  h4 {
+    margin-bottom: 33px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+
+    tr {
+      &:nth-of-type(even) {
+        background-color: $white;
+      }
+
+      th {
+        white-space: nowrap;
+        font-weight: 600;
+        color: $orange;
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      td {
+        white-space: nowrap;
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// responsive
+
+@media (max-width: 1024px) {
+  .table {
+    padding: 32px 0px 75px;
+    overflow: hidden;
+
+    table {
+      tr {
+        &:nth-of-type(even) {
+          background-color: $white;
+        }
+
+        th {
+          white-space: nowrap;
+        }
+
+        td {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 32px 0px;
+  background-color: $orange;
+  z-index: 10 !important;
+
+  &__top-box {
+    @include flex(space-between, center, row, nowrap);
+
+    &__logo-box {
+      @include flex(flex-start, center, row, nowrap);
+
+      img {
+        margin-right: 58px;
+      }
+
+      &__hamburger {
+        display: none !important;
+      }
+
+      &__link-box {
+        white-space: nowrap;
+        margin-right: 40px;
+        a {
+          margin-right: 40px;
+          font-size: 18px;
+          font-weight: 600;
+          color: $white;
+          position: relative;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          &::after {
+            width: 0%;
+            position: absolute;
+            transition: $transitionOut;
+            bottom: -47px;
+            left: -10px;
+            content: "";
+            display: block;
+            width: 0%;
+            background-color: black;
+            height: 5px;
+          }
+
+          &:hover {
+            color: $semiBlack;
+            transition: $transitionIn;
+
+            &::after {
+              transition: $transitionIn;
+              width: 97px;
+            }
+          }
+        }
+      }
+
+      form {
+        position: relative;
+        margin-right: 10px;
+
+        input {
+          max-width: 256px;
+          width: 100%;
+          padding: 19px 16px;
+          background-color: $white;
+          border-radius: 4px;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $semiBlack;
+          }
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          position: absolute;
+          right: 17px;
+          top: 17px;
+
+          i {
+            font-size: 20px;
+            transition: $transitionOut;
+
+            &:hover {
+              cursor: pointer;
+              color: $orange;
+              transition: $transitionOut;
+            }
+          }
+        }
+      }
+    }
+
+    &__icon-box {
+      display: flex;
+      i {
+        font-size: 20px;
+        transition: $transitionOut;
+        margin-right: 24px;
+        color: $white;
+
+        &:hover {
+          cursor: pointer;
+          color: $semiBlack;
+          transition: $transitionOut;
+        }
+      }
+
+      &__cart {
+        position: relative;
+        cursor: pointer;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $green;
+          position: absolute;
+          bottom: -2px;
+          right: 10px;
+          width: 20px;
+          height: 20px;
+          font-size: 15px;
+          color: $white;
+          padding: 3px 8.5px 1px 7px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  &__bottom-box {
+    display: none;
+  }
+}
+
+// responsive
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 21px 0px;
+    background-color: $orange;
+
+    &__top-box {
+      &__logo-box {
+        img {
+          margin-right: 58px;
+        }
+
+        &__hamburger {
+          display: block !important;
+          font-size: 25px;
+          color: $white;
+          margin-right: 33px;
+          transition: $transitionOut;
+
+          &:hover {
+            cursor: pointer;
+            color: $semiBlack;
+            transition: $transitionOut;
+          }
+        }
+
+        &__link-box {
+          display: none;
+        }
+
+        form {
+          display: none;
+        }
+      }
+    }
+
+    &__bottom-box {
+      transition: $transitionOut;
+      max-height: 0px;
+      margin-top: 0px;
+      overflow: hidden;
+      @include flex(flex-start, flex-start, column, nowrap);
+
+      a {
+        font-size: 18px;
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: $semiBlack;
+          transition: $transitionIn;
+        }
+      }
+
+      form {
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+
+        input {
+          width: 100%;
+          padding: 19px 16px;
+          background-color: $white;
+          border-radius: 4px;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $semiBlack;
+          }
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          position: absolute;
+          right: 17px;
+          top: 17px;
+
+          i {
+            font-size: 20px;
+            transition: $transitionOut;
+
+            &:hover {
+              cursor: pointer;
+              color: $orange;
+              transition: $transitionOut;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .active-menu {
+    .navbar__bottom-box {
+      transition: $transitionIn;
+      max-height: 500px;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+/*---------------------------------
+    DEFAULT STYLES
+-----------------------------------*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $text;
+  line-height: 1.5;
+  font-size: $fontSize;
+}
+
+h1 {
+  @include text(600px, 40px, 48px, $headings, $semiBlack);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include text(600px, 28px, 36px, $headings, $semiBlack);
+}
+
+p {
+  @include text(400px, 16px, 24px, $text, $semiBlack);
+
+  @media (max-width: 1024px) {
+    @include text(400px, 14px, 24px, $text, $semiBlack);
+  }
+}
+
+i {
+  color: $semiBlack;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0px 24px !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $semiBlack;
+  transition: $transitionIn;
+  font-family: $text;
+
+  &:hover {
+    transition: $transitionOut;
+  }
+}

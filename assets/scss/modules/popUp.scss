@@ -1,0 +1,113 @@
+.pop-up {
+  position: fixed;
+  padding: 0px 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.459);
+  @include flex(center, center, row, nowrap);
+
+  &__content {
+    background-color: $white;
+    border-radius: 4px;
+    max-width: 480px;
+    width: 100%;
+    padding: 20px 32px 24px;
+
+    &__title-box {
+      @include flex(space-between, center, row, nowrap);
+
+      h4 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 20px;
+        height: 40px;
+        transition: $transitionOut;
+
+        &:hover {
+          transition: $transitionIn;
+          color: $orange;
+        }
+      }
+    }
+
+    form {
+      margin: 24px 0px;
+
+      input {
+        width: 100%;
+        background-color: $grey;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 19px 16px;
+        margin-bottom: 16px;
+
+        &::placeholder {
+          color: $semiBlack;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 128px;
+        padding: 19px 16px;
+        background-color: $grey;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: $text;
+        resize: none;
+
+        &::placeholder {
+          color: $semiBlack;
+        }
+      }
+    }
+
+    &__btn-box {
+      float: right;
+
+      button {
+        &:first-child {
+          margin-right: 8px;
+          @include button(11px 20px 13px, $orange, $white);
+        }
+
+        &:last-child {
+          @include button(11px 20px 13px, $white, $orange);
+        }
+
+        &:hover {
+          transition: $transitionIn;
+          background-color: $darkGrey;
+        }
+      }
+    }
+  }
+}
+
+.pop-up-hide {
+  display: none;
+}
+
+// responsive
+
+@media (max-width: 1024px) {
+  .pop-up {
+    &__content {
+      background-color: $white;
+      max-width: 100%;
+      padding: 20px 24px 24px;
+    }
+  }
+}

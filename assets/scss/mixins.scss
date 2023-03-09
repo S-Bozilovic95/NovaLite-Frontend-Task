@@ -1,0 +1,30 @@
+@mixin flex($justify, $align, $direction, $wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin text($fontWeight, $fontSize, $lineHeight, $fontFamily, $color) {
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $fontFamily;
+  color: $color;
+}
+
+@mixin button($padding, $textColor, $backgroundColor) {
+  padding: $padding;
+  color: $textColor;
+  background-color: $backgroundColor;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $headings;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transitionOut;
+}
